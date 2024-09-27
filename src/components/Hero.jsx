@@ -23,7 +23,7 @@ const Hero = () => {
     >
       <div className="w-[%] justify-center ml-0 xl:w-[45%] flex xl:ml-20 xl:items-start flex-col gap-4 items-center">
         <h1 className="text-3xl text-wrap xl:text-5xl text-[] text-cente text-wrap font-bold ">
-          Become the environment's superhero <br />{" "}
+          Become the environment's superhero <br />
           <span className="text-[#EF362C]"> while earning</span>
         </h1>
         <p className="text- text-wrap">
