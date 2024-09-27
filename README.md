@@ -1,8 +1,5 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Waste2Cash 
+It is an environmental project aim to maintain sanity of your settlements.
+Waste2Cash collects used disposal such as plastics, metals, woods and any other material which can be 
+used for recycling purposes. 
+Waste2Cash rewards individuals contributions in many forms depending on the your scale of engagement.
