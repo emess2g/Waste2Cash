@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { FaLinkedin, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 import {Link, NavLink} from 'react-router-dom'
 import assets from '../assets/assets';
+import { MdEmail, MdHome, MdPhone } from 'react-icons/md';
 
 const Footer = () => {
 
@@ -12,20 +13,23 @@ const Footer = () => {
 
   return (
     <div className='bg-[#F7F7F7] text-[#747474] '>
-      <div className="xl:mx-10 flex flex-col text-cener items-center justify-between gap-[rem] bg-[]  pt-[6rem] px-8 pb-[rem] lg:px-12">
-      <div className="flex flex-col  gap-[3rem] lg:flex-row  justify-betwe p-">
-        <div className="lg:w-[30%]">
+      <div className="xl:mx-10  flex flex-col text-cener items-center justify-between gap-[rem] bg-[]  pt-[6rem] px-8 pb-[rem] lg:px-12">
+      <div className="flex flex-col  gap-[3rem] lg:flex-row   justify-betwn p-">
+        <div className="xl:w-[30%] flex flex-col justify-center">
            <NavLink to='/'>
            <img className='w-[50%]' src={assets.logo} alt="logo" />
            </NavLink>
             <article className='text-[14px] mt-10'>
-            Rural Code Camp is on a mission to empower the youth in Ghana’s rural communities with essential digital skills. By bringing technology education directly to schools and villages, we are ensuring that every child has the opportunity to thrive in the digital age
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto doloremque nihil ducimus doloribus neque, dolor sint.
             </article>
+            <button className='w-[50%] bg-[#1A7122] text-white p-4 m-3 rounded-md text-center'>
+                Join Us
+            </button>
         </div>
 
-       <div className=" flex flex-col gap-4 items-cente p- lg:flex-row text-[18px]  justify-between flex-1">
+       <div className=" flex flex-col gap-4  p- lg:flex-row text-[18px]  justify-between flex-1">
         <div className="">
-        <h2 className=' font-semibold mb-2' >Quick Links</h2>
+        <h2 className='text-[#1A7122] font-semibold mb-2' >Quick Links</h2>
         <div className="flex flex-col gap-2 py-  text-[px]">
                 <Link className='flex items-center gap-2' to='/'>         
                   <p>Home</p>
@@ -39,8 +43,8 @@ const Footer = () => {
                 <p>Projects</p>
                 </Link>
               
-                <Link className='flex items-center gap-2' to='/getinvolve'>
-                <p>Get Involve</p>
+                <Link className='flex items-center gap-2' to='/register'>
+                <p>Register</p>
                 </Link>
 
                 <Link className='flex items-center gap-2' to='/blog'>
@@ -50,7 +54,7 @@ const Footer = () => {
         </div>
 
         <div className="">
-          <h1 className='font-semibold mb-2'>Follow Us</h1>
+          <h1 className='text-[#1A7122] font-semibold mb-2'>Follow Us</h1>
            
           <div className="flex flex-col gap-4 py-  text-[px]">
                 <Link className='flex items-center gap-2' to='https://x.com/ruralcodecampgh'>         
@@ -76,32 +80,37 @@ const Footer = () => {
             </div>
         </div>
 
-         <div className="flex flex-col gap-4 mb-6">
-            <h2 className=' font-semibold' >Contact Us</h2>
+         <div className="flex flex-col gap-2 mb-6">
+            <h2 className='text-[#1A7122] font-semibold' >Contact Us</h2>
 
             <div>
-                <p> Email: <span className='text-[gray] pointer'>info@ruralcodecamp.org</span> </p>                
-                <p>Phone: <span className='text-[gray] pointer'>+233 551143989</span> </p>
-                <address>Address: <span className='text-[gray] pointer'>CC-980-73, Accra- Ghana</span> </address>
+                <div className='flex items-center gap-2'> <MdEmail/> 
+                 <span className='text-[gray] pointer'>info@waste2cash.org</span> </div>  
+
+                <div className='flex items-center gap-2'> <MdPhone/>
+                 <span className='text-[gray] pointer'>+233 551143989</span> </div>
+
+                <address className='flex items-center gap-2'> <MdHome/>
+                 <span className='text-[gray] pointer'>CC-980-73, Accra- Ghana</span> </address>
             </div>
 
-            <div className="">
+            <div className="text-md">
               <h1 className='text-[gray]'>Subscribe To Our Newsletter:</h1>
-              <form action="">
-                <input type="email" className='p-2' placeholder='Email Address' /> 
+              <form action="" className='flex items-center'>
+                <input type="email" className='text-sm p-2 outline-none border border-[#1A7122] ' placeholder='Email Address' /> 
                 <Link to=''>
-                <button type="submit" className="bg-[#faaf40] p-2">Subscribe</button>
+                <button type="submit" className="bg-[#1A7122] text-sm text-white p-2 border border-[#1A7122]">Subscribe</button>
                 </Link>
               </form>
             </div>
          </div>
       </div>
      </div>
-      <hr/>
+      <hr className='w-[100%] mt-4 border-[#1A7122] '/>
       {/* divider */}
-     <div className="flex justify-center my-8"> 
+     <div className="flex justify-center text-center text-[#1A7122]  my-4"> 
         <div className="">
-             &copy;{getYear()} - RCC. ALL RIGHTS RESERVED.
+             &copy;{getYear()} - Waste2Cash. ALL RIGHTS RESERVED.
         </div>
      </div>
       </div>

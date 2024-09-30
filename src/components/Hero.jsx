@@ -30,7 +30,7 @@ const Hero = () => {
           It's easy, convenient and good for the planet
         </p>
         <NavLink to="/about">
-          <button className="bg-[#EF362C] w-[%] py-3 px-6 rounded flex items-center gap-4 mt-2 font-semibold">
+          <button className="bg-[#1A7122] w-[%] py-3 px-6 rounded flex items-center gap-4 mt-2 font-semibold">
             start turning waste2cash <IoArrowForward className="" />
           </button>
         </NavLink>

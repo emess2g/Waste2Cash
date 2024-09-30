@@ -100,7 +100,7 @@ const Blog = () => {
       ];
   return (
     <section className="bg-[]">
-    <div className="mx-[4.8rem] my-12 ">
+    <div className="mx-4 xl:mx-[4.8rem] my-12 ">
     <div className="flex flex-col justify-center items-center ">
        <div className="flex items-center justify-between pt-12 lg:">
            <h1 className=" mb-14  text-[#1A7122] text-center font-semibold text-6xl ">
@@ -110,11 +110,11 @@ const Blog = () => {
         
         <div className=" flex items-cente justify-cente">
      
-     <div className=" flex  items-center text-w justify-center  mb-14 gap-8">
+     <div className=" xl:flex  items-center text-w justify-center  mb-14 gap-8 flex-col">
      {blogData.map((val, index) => {
        const {img, title, author, detail, date , icons } = val;
        return (
-         <div key={index} className=" flex  flex-col gap-2 w-[40%] items-center ">
+         <div key={index} className=" flex  flex-col gap-2 xl:w-[40%] items-center ">
             <div className="">
             <img src={img} className="rounded-md" alt="" />   
               </div>              

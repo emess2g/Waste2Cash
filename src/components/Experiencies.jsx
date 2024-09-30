@@ -1,13 +1,15 @@
 import React from 'react'
 import assets from '../assets/assets'
 import { MdStars } from 'react-icons/md'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
 
 const Experiencies = () => {
   return (
     <div>
        <section>
-        <div className="flex flex-col items-center justify-center bg-[#1A7122] h-[50vh]    ">
-          <div className="w-[45%] text-center">
+        <div className="flex flex-col items-center py-6 px-2 justify-center bg-[#1A7122]     ">
+          <div className="xl:w-[45%] text-center">
               {/* header */}
          <h1 className=" text-wrap text-4xl text-[white] mb-2 text-wrap font-semibold ">
            Happy Individual's 
@@ -19,8 +21,13 @@ const Experiencies = () => {
           </div> 
 
         {/* cards */}
-          <div className="flex items-center justify-center gap-4 pt-8">
-          <div className=" bg-[#fff] text-black w-[30%] flex  justif item flex-col gap-4 p-4 rounded-md ">
+        <div className=" flex items-center justify-center gap-4 pt-8">
+        <Swiper
+        slidesPerView={1}
+        spaceBetween={''}
+        >
+       
+          <SwiperSlide className=" bg-[#fff] text-black xl:w-[30%] flex  justif item flex-col gap-4 p-4 rounded-md ">
               {/* rating */}
               <div className="flex text-xl text-[#1A7122]">
                   <MdStars/>
@@ -42,8 +49,8 @@ const Experiencies = () => {
                   </div>
                  </div>
                
-        </div>
-        <div className="  bg-[#fff] text-black w-[30%] flex  justif item flex-col gap-4 p-4 rounded-md ">
+        </SwiperSlide>
+        <SwiperSlide className="  bg-[#fff] text-black xl:w-[30%] flex  justif item flex-col gap-4 p-4 rounded-md ">
               {/* rating */}
               <div className="flex text-xl text-[#1A7122]">
                   <MdStars/>
@@ -65,8 +72,10 @@ const Experiencies = () => {
                   </div>
                  </div>
                
+        </SwiperSlide>
+        </Swiper>
         </div>
-          </div>
+          
         </div>
       </section>
     </div>

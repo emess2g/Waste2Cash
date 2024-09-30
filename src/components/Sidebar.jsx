@@ -32,8 +32,8 @@ const Sidebar = ({showSidebar}) => {
     },
     {
       id: "6",
-      title: "Get Involve",
-      path: "/getinvolve",
+      title: "Register",
+      path: "/register",
     },
   ];
 
@@ -45,9 +45,9 @@ const Sidebar = ({showSidebar}) => {
          <ul className=' flex-1'>     
             {sidebarData.map((item, index) => {
                 return ( <li key={index} className='flex flex-row gap- p-2'>
-                      <Link to={item.path} className={showSidebar ? 'font-semibold w-full duration-700 flex items-center justify-between p-2 ' : ''  }>
+                      <Link to={item.path} className={showSidebar ? 'text-[#1A7122] font-semibold w-full duration-700 flex items-center justify-between p-2 ' : ''  }>
                          <span onClick={showSidebar}  
-                         className={index == 5 ? "bg-[#262063] font-semibold rounded-md py-3 px-6 text-[#FCAE43] duration-700" : "bg-inherit"}
+                         className={index == 5 ? "bg-[#1A7122] font-semibold rounded-md py-3 px-6 text-[#fff] duration-700" : "bg-inherit"}
                                                        
                          >
                           {item.title}</span>
