@@ -110,7 +110,7 @@ const Blog = () => {
         
         <div className=" flex items-cente justify-cente">
      
-     <div className=" xl:flex  items-center text-w justify-center  mb-14 gap-8 flex-col">
+     <div className=" xl:flex-row  items-center text-w justify-center  mb-14 gap-8 flex-col">
      {blogData.map((val, index) => {
        const {img, title, author, detail, date , icons } = val;
        return (
