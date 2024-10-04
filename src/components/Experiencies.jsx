@@ -65,7 +65,7 @@ const Experiencies = () => {
           <Carousel
             swipeable={true}
             draggable={true}
-            // showDots={true}
+            showDots={true}
             responsive={responsive}
             ssr={false} // means to render carousel on server-side.
             // infinite={true}
