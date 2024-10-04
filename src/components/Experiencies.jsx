@@ -65,7 +65,7 @@ const Experiencies = () => {
           <Carousel
             swipeable={true}
             draggable={true}
-            showDots={true}
+            // showDots={true}
             responsive={responsive}
             ssr={false} // means to render carousel on server-side.
             // infinite={true}
@@ -83,7 +83,7 @@ const Experiencies = () => {
             {
                 cards.map((card) => {
                     return( 
-                    <div className="flex w-[%] items-center justify-center m-2 mb-8 ">
+                    <div className="flex w-[%] items-center justify-center m-1 mb-8 ">
                     <div className="w-[%] bg-[#fff] text-black xl: flex flex-col gap-4 py-4 px-3 rounded-md">
                       {/* rating */}
                       <div className="flex text-xl text-[#1A7122]">
