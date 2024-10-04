@@ -71,9 +71,9 @@ const Experiencies = () => {
             // infinite={true}
             // autoPlay={false}
             // autoPlaySpeed={1000}
-            keyBoardControl={true}
-            customTransition="all .5"
-            transitionDuration={1000}
+            // keyBoardControl={true}
+            // customTransition="all .5"
+            // transitionDuration={1000}
             containerClass="w-full flex justify-center"
             removeArrowOnDeviceType={["tablet", "mobile"]}
             // deviceType={this.props.deviceType}
