@@ -1,6 +1,8 @@
 import React from 'react'
 import assets from '../assets/assets';
 import { MdAccountCircle, MdTimer } from "react-icons/md";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css"
 
 const Blog = () => {
 
@@ -98,6 +100,23 @@ const Blog = () => {
         },
 
       ];
+
+      const responsive = {
+        desktop: {
+          breakpoint: { max: 3000, min: 1024 },
+          items: 3,
+        },
+        tablet: {
+          breakpoint: { max: 1024, min: 464 },
+          items: 2,
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 1,
+        },
+      };
+    
+
   return (
     <section className="bg-[]">
     <div className="mx-4 xl:mx-[4.8rem] my-12 ">
@@ -108,13 +127,31 @@ const Blog = () => {
            </h1>
        </div>
         
-        <div className=" flex items-cente justify-cente">
      
-     <div className=" xl:flex-row  items-center text-w justify-center  mb-14 gap-8 flex-col">
-     {blogData.map((val, index) => {
+   
+     <Carousel
+            swipeable={true}
+            draggable={true}
+            showDots={true}
+            responsive={responsive}
+            ssr={false} // means to render carousel on server-side.
+            // infinite={true}
+            autoPlay={true}
+            autoPlaySpeed={1500}
+            keyBoardControl={true}
+            customTransition="all .5"
+            transitionDuration={2000}
+            containerClass="w-[100%]"
+            removeArrowOnDeviceType={["desktop"]}
+            // deviceType={this.props.deviceType}
+            dotListClass="custom-dot-list-style"
+            itemClass="carousel-item-padding-40-px"
+          >
+                {blogData.map((val, index) => {
        const {img, title, author, detail, date , icons } = val;
        return (
-         <div key={index} className=" flex  flex-col gap-2 xl:w-[40%] items-center ">
+        <div key={index} className=" xl:flex-row  items-center text-w justify-center  mb-6 gap-8 flex flex-col">
+         <div className=" flex  flex-col gap-2 m-1 items-center ">
             <div className="">
             <img src={img} className="rounded-md" alt="" />   
               </div>              
@@ -130,10 +167,13 @@ const Blog = () => {
            
             </div>
          </div>
+         </div>
        );
-     })}
-   </div>
-      </div>     
+     })}        
+          </Carousel>
+
+
+         
     </div>
     </div>
 

@@ -9,20 +9,20 @@ const Hero = () => {
     <div
       style={{
         backgroundImage: `url(${assets.hero3})`,
-        backgroundColor: "#1A7122",
+        backgroundFilter: "",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-evenly",
-        alignItems: "start",
+        alignItems: "center",
         marginTop: "rem",
       }}
       className=" h-[60vh] text-center text-white xl:text-start xl:h-[88vh]"
     >
-      <div className="w-[%] justify-center ml-0 xl:w-[45%] flex xl:ml-20 xl:items-start flex-col gap-4 items-center">
-        <h1 className="text-3xl text-wrap xl:text-5xl text-[] text-cente text-wrap font-bold ">
+      <div className="w-[%] justify-center ml-0  flex xl:ml-20  flex-col gap-6 items-center">
+        <h1 className="text-3xl text-wrap xl:text-5xl text-[] text-center text-wrap font-bold ">
           Become the environment's superhero <br />
           <span className="text-[#EF362C]"> while earning</span>
         </h1>
