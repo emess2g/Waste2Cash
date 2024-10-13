@@ -21,7 +21,7 @@ const Hero = () => {
         alignItems: "center",
         marginTop: "rem",
       }}
-      className=" h-[60vh] text-center text-white xl:text-start xl:h-[88vh]"
+      className=" relative h-[60vh] text-center text-white xl:text-start xl:h-[88vh]"
     >
       <div className="w-[%] relative justify-center ml-0  flex xl:ml-20  flex-col gap-6 items-center">
         <h1 className="text-3xl text-wrap xl:text-5xl text-[] text-center text-wrap font-bold ">
@@ -32,18 +32,18 @@ const Hero = () => {
           It's easy, convenient and good for the planet
         </p>
         <NavLink className=' ' to="">     
-          {showModal ? <div className="">
-            <ModalPopup setShowModal={setShowModal}/>
+          {/* <div className="">
+           
             <button onClick={() => setShowModal(false)} className="bg-[#1A7122] w-[%] py-3 px-6 rounded flex items-center gap-4 mt-2 font-semibold">
              submit 
          </button>
-          </div> :
+          </div>  */}
            <button onClick={() => setShowModal(true)} className="bg-[#1A7122] w-[%] py-3 px-6 rounded flex items-center gap-4 mt-2 font-semibold">
            Request a Pickup <IoArrowForward className="" />         
          </button>
-          }     
+             
         </NavLink>
-       
+        {showModal &&  <ModalPopup setShowModal={setShowModal}/>} 
       </div>
     </div>
   );
