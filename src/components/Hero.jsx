@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import assets from "../assets/assets";
 import { IoArrowForward } from "react-icons/io5"
-import Modal from "./modal";
+import Modal from "./Modal.jsx";
 
 
 const Hero = () => {
