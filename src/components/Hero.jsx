@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import assets from "../assets/assets";
 import { IoArrowForward } from "react-icons/io5"
-import Modal from "./Modal.jsx";
+import ModalPopup from "./ModalPopup";
 
 
 const Hero = () => {
@@ -33,7 +33,7 @@ const Hero = () => {
         </p>
         <NavLink className=' ' to="">     
           {showModal ? <div className="">
-            <Modal setShowModal={setShowModal}/>
+            <ModalPopup setShowModal={setShowModal}/>
             <button onClick={() => setShowModal(false)} className="bg-[#1A7122] w-[%] py-3 px-6 rounded flex items-center gap-4 mt-2 font-semibold">
              submit 
          </button>
