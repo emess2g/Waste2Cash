@@ -19,7 +19,7 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <div className="bg-[whitesmoke] m-">
-          <div className="fixed top-0 z-10 w-full ">
+          <div className="fixed top-0 z-[99] w-full ">
             <Navbar />
           </div>
           <div className="">

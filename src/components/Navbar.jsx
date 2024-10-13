@@ -71,7 +71,7 @@ const Navbar = ({}) => {
 
   return (
     <nav className={colorChange ? "bg-[#1A7122] shadow-xl  w-full duration-700 " : "bg-[#1a7122] duration-700 "}>
-      <div className="flex justify-between py-4  mx-4 xl:mx-[4.2rem] items-center sticky top-0 z-99">
+      <div className="flex justify-between py-4  mx-4 xl:mx-[4.2rem] items-center sticky top-0 z-">
         <div className="  xl:pl-">
           <Link to='/'>
           <img
@@ -84,7 +84,7 @@ const Navbar = ({}) => {
 
         { sidebar ? (<Sidebar showSidebar={showSidebar} />) 
         : 
-        (       <nav className="hidden d  lg:block w-[50%] ">
+        (       <nav className="hidden d  lg:block w-[50%]">
           <ul className="lg: flex text-nowrap gap-2 py-2  justify-between items-center  ">
             {SidebarData.map((item, index) => {
               return (
