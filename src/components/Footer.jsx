@@ -22,9 +22,9 @@ const Footer = () => {
             <article className='text-[14px] mt-10'>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto doloremque nihil ducimus doloribus neque, dolor sint.
             </article>
-            <button className='w-[50%] bg-[#1A7122] text-white p-4 m-3 rounded-md text-center'>
+            {/* <button className='w-[50%] bg-[#1A7122] text-white p-4 m-3 rounded-md text-center'>
                 Join Us
-            </button>
+            </button> */}
         </div>
 
        <div className=" flex flex-col gap-4  p- lg:flex-row text-[18px]  justify-between flex-1">
