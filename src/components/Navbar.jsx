@@ -6,19 +6,20 @@ import { NavLink, Link } from "react-router-dom";
 import { IoMenu, IoClose } from "react-icons/io5";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import Sidebar from "./Sidebar";
+import ModalPopup from "./ModalPopup";
 // import Home from "../pages/Home";
 
 const Navbar = ({}) => {
   const [sidebar, setSidebar] = useState(false);
-  // const [closeMenu, setClosemenu] = useState(false);
+  const [showModal,setShowModal] = useState(false);
   const [colorChange, setColorchange] = useState(false);
-  const [media, SetMedia] = useState(false);
+  // const [media, SetMedia] = useState(false);
 
 
   
   const showSidebar = () => {
     setSidebar(!sidebar );
-    setClosemenu(!closeMenu); 
+    // setClosemenu(!closeMenu); 
   };
 
  
@@ -51,8 +52,8 @@ const Navbar = ({}) => {
     },
     {
       id: "6",
-      title: "Register",
-      path: "/register",
+      title: "Request Pickup",
+      path: "",
     },
   ];
 
@@ -71,7 +72,7 @@ const Navbar = ({}) => {
 
   return (
     <nav className={colorChange ? "bg-[#1A7122] shadow-xl  w-full duration-700 " : "bg-[#1a7122] duration-700 "}>
-      <div className="flex justify-between py-4  mx-4 xl:mx-[4.2rem] items-center sticky top-0 z-">
+      <div className="flex justify-between py-4  mx-1 xl:mx-[4.2rem] items-center sticky top-0 z-">
         <div className="  xl:pl-">
           <Link to='/'>
           <img
@@ -94,9 +95,8 @@ const Navbar = ({}) => {
                   className=' px-4 xl:text-[20px] duration-700 text-white  font-semibold'             
                 >
                   <span
-                    className={
-                      index == 5 ? "bg-[#EF362C] font-semibold rounded-md p-3 duration-700" : "bg-inherit"
-                    }
+                    className={index == 5 ? "bg-[#EF362C] font-semibold rounded-md p-3 duration-700" : "bg-inherit" } 
+                    onClick={() => setShowModal(true)}
                   >
                     {item.title}
                   </span>
@@ -104,22 +104,37 @@ const Navbar = ({}) => {
               );
             })}
           </ul>
+       
         </nav>)}
 
  
-
-        <div className=" flex text-3xl text-black items-center gap-4 text-2xl duration-700 lg:hidden">
-
+         
+        <div className=" flex  text-white items-center gap-4 text duration-700 lg:hidden">
+        <div className="">
+       
+         </div>
           {sidebar ? (
-            <IoClose
+            <div className=""> 
+          <IoClose
              onClick={showSidebar }
-             className={sidebar ? 'text-white absolute right-1 bg-[#1A7122] showdow rounded-[50%] p- text-2xl top-10 duration-700' : ''} 
+             className={sidebar ? 'text-white absolute right-1 bg-[#1A7122] showdow rounded-[50%] p- text-4xl top-10 duration-700' : ''} 
              />         
+            </div>
           ) : (
-            <IoMenu  className="duration-700 text-white" onClick={showSidebar} />
+            <div className="flex items-center gap-2 ">
+           <button 
+           className="bg-[#EF362C] text-[16px] text-nowrap  rounded p-1 duration-700"
+           onClick={() => setShowModal(true)}>
+            Request Pickup
+          </button>
+            <IoMenu  className="duration-700 text-white text-4xl" onClick={showSidebar} />
+            </div>
+          
           )}
+      
         </div>
       </div>
+      {showModal &&  <ModalPopup setShowModal={setShowModal}/>} 
     </nav>
   );
 };
