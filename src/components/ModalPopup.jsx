@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Autocomplete from "react-google-autocomplete";
 import { IoClose } from "react-icons/io5";
-import { api_key } from "./config.js";
 
 const ModalPopup = ({ setShowModal }) => {
   
+const api_key = process.env.REACT_APP_API_KEY; 
 
   return (
     <section className="w-[90%] xl:w-[30%] md:w-[40%] absolute m-4  items-center right-[0] text-black text-start bg-[#fff] p-4 rounded">
