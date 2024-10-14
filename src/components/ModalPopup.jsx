@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Autocomplete from "react-google-autocomplete";
 import { IoClose } from "react-icons/io5";
-import { kGoogleApiKey } from "../../../env";
+import { kGoogleApiKey } from "../../../env.js";
 
 const ModalPopup = ({ setShowModal }) => {
   
