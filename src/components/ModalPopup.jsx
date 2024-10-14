@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Autocomplete from "react-google-autocomplete";
 import { IoClose } from "react-icons/io5";
-import { kGoogleApiKey } from "../../../env.js";
+import { api_key } from "./config.js";
 
 const ModalPopup = ({ setShowModal }) => {
   
@@ -27,7 +27,7 @@ const ModalPopup = ({ setShowModal }) => {
           Location
          
           <Autocomplete
-            apiKey={kGoogleApiKey}
+            apiKey={api_key}
             onPlaceSelected={(place) => {
               console.log(place);
             }}
