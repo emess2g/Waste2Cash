@@ -1,40 +1,39 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import Autocomplete from "react-google-autocomplete";
 import { IoClose } from "react-icons/io5";
+import { kGoogleApiKey } from "../../../env";
 
 const ModalPopup = ({ setShowModal }) => {
-    const [searchItem, setSearchItem] = useState('')
-    const [filteredUsers, setFilteredUsers] = useState([]);
+  const [searchItem, setSearchItem] = useState("");
+  const [filteredUsers, setFilteredUsers] = useState([]);
 
-    const locations = [
-        { names: "Ashongman Estate", id: 0 },
-        { names: "Ashongman Estate", id: 1 },
-        { names: "Accra Mall", id: 2 },
-        { names: "Agbogba", id: 3 },
-        { names: "Awoshie", id: 4 },
-        { names: "Bubuashie", id: 5 },
-        { names: "East Legon Hills", id: 6 },
-        { names: "Ashaley Botwe", id: 7 },
-        { names: "Dawhenya", id: 8 },
-        { names: "Amasaman", id: 9 },
-        { names: "Dzorwulu", id: 10 }
-      ]
+  const locations = [
+    { names: "Ashongman Estate", id: 0 },
+    { names: "Ashongman Estate", id: 1 },
+    { names: "Accra Mall", id: 2 },
+    { names: "Agbogba", id: 3 },
+    { names: "Awoshie", id: 4 },
+    { names: "Bubuashie", id: 5 },
+    { names: "East Legon Hills", id: 6 },
+    { names: "Ashaley Botwe", id: 7 },
+    { names: "Dawhenya", id: 8 },
+    { names: "Amasaman", id: 9 },
+    { names: "Dzorwulu", id: 10 },
+  ];
 
-    const handleInputChange = (e) => { 
-      const searchTerm = e.target.value;
-      setSearchItem(searchTerm)
-    
+  const handleInputChange = (e) => {
+    const searchTerm = e.target.value;
+    setSearchItem(searchTerm);
 
-    const filteredItems = locations.filter((loc) => 
-        loc.names.toLowerCase().includes(searchItem.toLowerCase())
-        );
-    
-        setFilteredUsers(filteredItems);
-      
-    }
+    const filteredItems = locations.filter((loc) =>
+      loc.names.toLowerCase().includes(searchItem.toLowerCase())
+    );
+
+    setFilteredUsers(filteredItems);
+  };
+
   return (
-    <section
-      className="w-[90%] xl:w-[30%] md:w-[40%] absolute m-4  items-center right-[0] text-black text-start bg-[#fff] p-4 rounded"
-    >
+    <section className="w-[90%] xl:w-[30%] md:w-[40%] absolute m-4  items-center right-[0] text-black text-start bg-[#fff] p-4 rounded">
       <header className="flex justify-between items-cemter mb-4">
         <h1>Details</h1>
         <div className="bg-red-400 p-1 rounded-[50%] text-white">
@@ -52,15 +51,25 @@ const ModalPopup = ({ setShowModal }) => {
         </label>
         <label className="flex flex-col items-" htmlFor="">
           Location
-             <input
+          {/* <input
               type="text"
               value={searchItem}
               onChange={(e) => handleInputChange(e)}
-              className="py-2 rounded outline-none bg-transparent border pl-2" />
-              <ul className="p-2 bg-[#F5F5F5]">
+              className="py-2 rounded outline-none bg-transparent border pl-2" /> */}
+          <Autocomplete
+            apiKey={kGoogleApiKey}
+            onPlaceSelected={(place) => {
+              console.log(place);
+            }}
+            options={{
+              types: ["(regions)"],
+              componentRestrictions: { country: "gh" },
+            }}
+            className="py-2 rounded outline-none bg-transparent border pl-2 "
+          />
+          {/* <ul className="p-2 bg-[#F5F5F5]">
               {filteredUsers.map(loc => <li key={loc.id}><p>{loc.names}</p></li>)}
-              </ul>
-
+              </ul> */}
         </label>
         <label className="flex flex-col items-" htmlFor="">
           Contact
