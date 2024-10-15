@@ -4,7 +4,7 @@ import { IoClose } from "react-icons/io5";
 
 const ModalPopup = ({ setShowModal }) => {
   
-const api_key = process.env.REACT_APP_API_KEY; 
+const api_key = 'AIzaSyA_qBSnevO4T8L2pW2qaCl13WOVPX9Gb9U'; 
 
   return (
     <section className="w-[90%] xl:w-[30%] md:w-[40%] absolute m-4  items-center right-[0] text-black text-start bg-[#fff] p-4 rounded">
@@ -16,9 +16,10 @@ const api_key = process.env.REACT_APP_API_KEY;
       </header>
       <form className="flex flex-col text-start gap-1 justify-start p-">
         <label className="flex flex-col items-" htmlFor="">
-          Name
+          Name 
           <input
             type="text"
+            required
             className="mb- py-2 rounded outline-none bg-transparent border pl-2  w-[%]"
             placeholder="e.g Rafik Gansta"
           />
@@ -42,7 +43,8 @@ const api_key = process.env.REACT_APP_API_KEY;
         <label className="flex flex-col items-" htmlFor="">
           Contact
           <input
-            type="phone"
+            type="tel"
+             required
             className="m- py-2 rounded outline-none bg-transparent border pl-2  w-[%]"
             placeholder="e.g 0550"
           />
@@ -51,6 +53,7 @@ const api_key = process.env.REACT_APP_API_KEY;
           Waste Type
           <input
             type="text"
+            required
             className=" py-2 rounded outline-none bg-transparent border pl-2  w-[%]"
             placeholder="e.g plastics, metals"
           />
@@ -58,14 +61,14 @@ const api_key = process.env.REACT_APP_API_KEY;
         <label className="flex flex-col items-" htmlFor="">
           Instruction
           <input
-            type="text"
+            type="textarea"
             className=" py-2 rounded outline-none bg-transparent border pl-2  w-[%]"
             placeholder=""
           />
         </label>
 
         <button
-          onClick={() => setShowModal(false)}
+          onClick={SubmitEvent}
           type="submit"
           className="bg-red-400 p-2 mt-2 text-white rounded-md text-1xl"
         >
