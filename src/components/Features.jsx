@@ -32,12 +32,12 @@ const Features = () => {
             ssr={false} // means to render carousel on server-side.
             // infinite={true}
             // autoPlay={true}
-            // autoPlaySpeed={1000}
+            autoPlaySpeed={500}
             keyBoardControl={true}
             customTransition="all .5"
             transitionDuration={2000}
             containerClass="w-[100%]"
-            removeArrowOnDeviceType={["desktop"]}
+            removeArrowOnDeviceType={["desktop","mobile","tablet"]}
             // deviceType={this.props.deviceType}
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"

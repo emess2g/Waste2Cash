@@ -67,23 +67,23 @@ const Experiencies = () => {
             draggable={true}
             showDots={true}
             responsive={responsive}
-            ssr={false} // means to render carousel on server-side.
-            infinite={true}
-            autoPlay={false}
+            // ssr={fals}  // means to render carousel on server-side.
+            // infinite={true}
+            // autoPlay={false}
             autoPlaySpeed={1500}
             keyBoardControl={true}
             customTransition="all .5"
             transitionDuration={2000}
             containerClass="w-full flex justify-center"
-            removeArrowOnDeviceType={[""]}
+            removeArrowOnDeviceType={["desktop","mobile"]}
             // deviceType={this.props.deviceType}
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"
           >
             {
-                cards.map((card) => {
+                cards.map((card,index) => {
                     return( 
-                    <div className="flex w-[%] items-center justify-center m-1 mb-8 ">
+                    <div key={index} className="flex w-[%] items-center justify-center m-1 mb-8 ">
                     <div className="w-[%] bg-[#fff] text-black xl: flex flex-col gap-4 py-4 px-3 rounded-md">
                       {/* rating */}
                       <div className="flex text-xl text-[#1A7122]">
