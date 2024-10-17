@@ -70,12 +70,12 @@ const Experiencies = () => {
             // ssr={fals}  // means to render carousel on server-side.
             // infinite={true}
             // autoPlay={false}
-            autoPlaySpeed={1500}
+            // autoPlaySpeed={1500}
             keyBoardControl={true}
             customTransition="all .5"
             transitionDuration={2000}
             containerClass="w-full flex justify-center"
-            removeArrowOnDeviceType={["desktop","mobile"]}
+            removeArrowOnDeviceType={["desktop","mobile","tablet"]}
             // deviceType={this.props.deviceType}
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"
