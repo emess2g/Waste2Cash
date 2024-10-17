@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import { mtConfig } from "@material-tailwind/react";
 export default {
   content: [
     "./index.html",

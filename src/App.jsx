@@ -1,6 +1,7 @@
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop.jsx";
@@ -18,6 +19,7 @@ function App() {
     <>
       <BrowserRouter>
         <ScrollToTop />
+        <ToastContainer/>
         <div className="bg-[whitesmoke] m-">
           <div className="fixed top-0 z-[99] w-full ">
             <Navbar />
