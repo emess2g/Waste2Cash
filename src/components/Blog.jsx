@@ -136,8 +136,8 @@ const Blog = () => {
             responsive={responsive}
             ssr={false} // means to render carousel on server-side.
             // infinite={true}
-            autoPlay={true}
-            autoPlaySpeed={1500}
+            // autoPlay={true}
+            // autoPlaySpeed={1500}
             keyBoardControl={true}
             customTransition="all .5"
             transitionDuration={2000}
