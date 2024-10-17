@@ -74,7 +74,7 @@ const Experiencies = () => {
             keyBoardControl={true}
             customTransition="all .5"
             transitionDuration={2000}
-            containerClass="w-[100%] flex justify-center"
+            containerClass="w-[100%] "
             removeArrowOnDeviceType={["desktop","mobile","tablet"]}
             // deviceType={this.props.deviceType}
             dotListClass="custom-dot-list-style"
